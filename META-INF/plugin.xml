@@ -48,6 +48,8 @@
     <projectConfigurable instance="com.jetbrains.ther.interpreter.TheRInterpreterConfigurable"/>
     <applicationService serviceInterface="com.jetbrains.ther.interpreter.TheRInterpreterService"
                         serviceImplementation="com.jetbrains.ther.interpreter.TheRInterpreterService"/>
+    <applicationService serviceInterface="com.jetbrains.ther.packages.TheRPackageService"
+                        serviceImplementation="com.jetbrains.ther.packages.TheRPackageService"/>
     <directoryProjectConfigurator implementation="com.jetbrains.ther.interpreter.TheRInterpreterConfigurator" id="interpreter"
                                   order="after PlatformProjectConfigurator"/>
     <stubIndex implementation="com.jetbrains.ther.psi.stubs.TheRAssignmentNameIndex"/>
@@ -67,5 +69,6 @@
                      implementationClass="com.jetbrains.ther.inspections.TheRUnresolvedReferenceInspection" groupKey=""/-->
     <lang.findUsagesProvider implementationClass="com.jetbrains.ther.TheRFindUsagesProvider" language="TheR"/>
     <documentationProvider implementation="com.jetbrains.ther.documentation.TheRDocumentationProvider"/>
+    <toolWindow id="Packages" anchor="right" factoryClass="com.jetbrains.ther.packages.TheRPackagesToolWindowFactory"/>
   </extensions>
 </idea-plugin>
