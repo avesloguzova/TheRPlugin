@@ -78,17 +78,17 @@ public class TheRPackageManagementService extends PackageManagementService {
 
   @Override
   public List<RepoPackage> getAllPackages() throws IOException {
-    return TheRPackagesUtil.getOrLoadPackages();
+    return TheRPackageInformationLoadUtil.getOrLoadPackages();
   }
 
   @Override
   public List<RepoPackage> reloadAllPackages() throws IOException {
-    return TheRPackagesUtil.getAvailablePackages();
+    return TheRPackageInformationLoadUtil.getAvailablePackages();
   }
 
   @Override
   public Collection<InstalledPackage> getInstalledPackages() throws IOException {
-    return TheRPackagesUtil.getInstalledPackages();
+    return TheRPackageInformationLoadUtil.getInstalledPackages();
   }
 
   @Override
@@ -137,6 +137,6 @@ public class TheRPackageManagementService extends PackageManagementService {
 
   @Override
   public void fetchPackageDetails(String s, CatchingConsumer<String, Exception> consumer) {
-    TheRPackagesUtil.fetchPackageDetails(s, consumer);
+    TheRPackageInformationLoadUtil.fetchPackageDetails(s, consumer);
   }
 }
